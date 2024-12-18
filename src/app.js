@@ -1,7 +1,7 @@
 window.onload = function() {
   // array with the words
   let first = "A ";
-  let adj = [
+  let adjective = [
     "two headed ",
     "nuclear ",
     "angry ",
@@ -54,18 +54,18 @@ window.onload = function() {
   ];
 
   // declaring random variables
-  let rdm1 = Math.floor(Math.random() * adj.length);
-  let rdm2 = Math.floor(Math.random() * noun.length);
-  let rdm3 = Math.floor(Math.random() * action.length);
-  let rdm4 = Math.floor(Math.random() * possetion.length);
-  let rdm5 = Math.floor(Math.random() * where.length);
+  let indexAdjective = Math.floor(Math.random() * adjective.length);
+  let indexNoun = Math.floor(Math.random() * noun.length);
+  let indexAction = Math.floor(Math.random() * action.length);
+  let indexPossetion = Math.floor(Math.random() * possetion.length);
+  let indexWhere = Math.floor(Math.random() * where.length);
 
   // creating a sentence (the excuse)
   document.querySelector("#excuse").innerHTML =
     first +
-    adj[rdm1] +
-    noun[rdm2] +
-    action[rdm3] +
-    possetion[rdm4] +
-    where[rdm5];
+    adjective[indexAdjective] +
+    noun[indexNoun] +
+    action[indexAction] +
+    possetion[indexPossetion] +
+    where[indexWhere];
 };
